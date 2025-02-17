@@ -42,22 +42,22 @@ document.querySelectorAll('.size-option').forEach(option => {
 
 // JS for original price from selected size
 
-// const sizeOptions = document.querySelectorAll('.size-option');
+const sizeOptions = document.querySelectorAll('.size-option');
 
-// function updatePrice(sizeButton) {
-//   const newPrice = sizeButton.getAttribute('data-price');
+function updatePrice(sizeButton) {
+  const newPrice = sizeButton.getAttribute('data-price');
 
-//   document.getElementById('product-price').textContent = `Rs.${newPrice}`;
+  document.getElementById('product-price').textContent = `Rs.${newPrice}`;
 
-//   sizeOptions.forEach(option => option.classList.remove('selected'));
-//   sizeButton.classList.add('selected');
-// }
+  sizeOptions.forEach(option => option.classList.remove('selected'));
+  sizeButton.classList.add('selected');
+}
 
-// sizeOptions.forEach(button => {
-//   button.addEventListener('click', () => {
-//     updatePrice(button);
-//   });
-// });
+sizeOptions.forEach(button => {
+  button.addEventListener('click', () => {
+    updatePrice(button);
+  });
+});
 
 // JS for giving discount from original price
 
